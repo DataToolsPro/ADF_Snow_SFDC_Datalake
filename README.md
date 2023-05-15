@@ -16,26 +16,28 @@ https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&language
 You will need a Snowflake linked service
 https://learn.microsoft.com/en-us/azure/data-factory/connector-snowflake?tabs=data-factory#create-a-linked-service-to-snowflake-using-ui
 
-When you create your linked service, you will want to cretae a system user with a role that has the following privileges:
-CREATE EXTERNAL TABLE - FUTURE SCHEMA
-CREATE MASKING POLICY - FUTURE SCHEMA
-CREATE SCHEMA
-CREATE STAGE - FUTURE SCHEMA
-CREATE TABLE - FUTURE SCHEMA
-CREATE TEMPORARY TABLE - FUTURE SCHEMA
-CREATE VIEW - FUTURE SCHEMA
-INSERT - FUTURE TABLE
-READ - FUTURE STAGE
-SELECT - FUTURE TABLE
-SELECT - FUTURE VIEW
-TRUNCATE - FUTURE TABLE
-UPDATE - FUTURE TABLE
-USAGE
-USAGE - FUTURE FUNCTION
-USAGE - FUTURE PROCEDURE
-USAGE - FUTURE SCHEMA
-USAGE - FUTURE STAGE
-WRITE - FUTURE STAGE
+When you create your linked service, you will want to ensure the ADD system user has a role that has been granted the following following privileges on the database you are using for this project. This following code will execte when you provide the database name and role name.
+<code>
+GRANT CREATE EXTERNAL TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE MASKING POLICY ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE SCHEMA ON DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE STAGE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE TEMPORARY TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT CREATE VIEW ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT INSERT ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT READ ON FUTURE STAGES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT SELECT ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT SELECT ON FUTURE VIEWS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT TRUNCATE ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT UPDATE ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT USAGE ON ACCOUNT TO ROLE <role_name>;
+GRANT USAGE ON FUTURE FUNCTIONS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT USAGE ON FUTURE PROCEDURES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT USAGE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT USAGE ON FUTURE STAGES IN DATABASE <db_name> TO ROLE <role_name>;
+GRANT WRITE ON FUTURE STAGES IN DATABASE <db_name> TO ROLE <role_name>;
+  </code>
 
 Once you have tested, we recommend setting a security/network policy for this newly created system user:
 https://datatoolspro.com/tutorials/snowflake-user-network-policy/
