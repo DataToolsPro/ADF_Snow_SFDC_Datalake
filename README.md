@@ -2,7 +2,7 @@
 Azure Data Factory Template: Salesforce to Snowflake Metadata Driven Data Lake
 
 5 Minute Demo - https://www.youtube.com/watch?v=mI89lLFwSdQ
-30 Minute End to End configuration (coming soon!)
+<br/>30 Minute End to End configuration (coming soon!)
 
 <h2>Pre-Install ADF Requirements</h2>
 <h3>SALESFORCE</h3>
