@@ -52,11 +52,11 @@ https://docs.snowflake.com/en/user-guide/data-load-azure-config#option-2-generat
 https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#create-an-azure-blob-storage-linked-service-using-ui
 
 <h2>ADF Template Install Directions</h2>
-1. Download the Zip Template file labeled "Data Tools Pro 1 Click Data Lake"
-2. Open Azure Data Factory
-3. Click "+" Button Next to Pipelines
-4. Click Add from Template
-5. Select the downloaded zip file from your desktop
-6. Follow the Template Prompts to select your Salesforce, Snowflake, and Blob storage linked services
-7. Select the canvas and click parameters
-8. Fill in the parameters for DatabaseName, Schemaname, and optional prompts for creating a new schema or using an existing schema.
+<ol><li>Download the Zip Template file labeled "Data Tools Pro 1 Click Data Lake"</li>
+<li>Open Azure Data Factory</li>
+<li>Click "+" Button Next to Pipelines</li>
+<li>Click Add from Template</li>
+<li>Select the downloaded zip file from your desktop</li>
+<li>Follow the Template Prompts to select your Salesforce, Snowflake, and Blob storage linked services</li>
+<li>Select the canvas and click parameters</li>
+<li>Fill in the parameters for DatabaseName, Schemaname, and optional prompts for creating a new schema or using an existing schema.</li></ol>
