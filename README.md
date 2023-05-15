@@ -1,6 +1,8 @@
 # adf_snow_sfdc_datalake
 Azure Data Factory Template: Salesforce to Snowflake Metadata Driven Data Lake
 
+5 Minute Demo - https://www.youtube.com/watch?v=mI89lLFwSdQ
+
 <h2>Pre-Install ADF Requirements</h2>
 <h3>SALESFORCE</h3>
 You will need a Salesforce linked service
