@@ -44,9 +44,10 @@ https://datatoolspro.com/tutorials/snowflake-user-network-policy/
 
 <h3>Blob Storage with Shared access signature (SAS) based Authentication</h3>
 You will need a blob storage container linked service configured with Shared access signature
+<br/>
 1 Shared access signature authentication configuration
 https://docs.snowflake.com/en/user-guide/data-load-azure-config#option-2-generating-a-sas-token
-
+<br/>
 2. Create a SAS Linked Service in ADF
 https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#create-an-azure-blob-storage-linked-service-using-ui
 
