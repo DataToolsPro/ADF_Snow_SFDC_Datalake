@@ -1,5 +1,5 @@
 # adf_snow_sfdc_datalake
-Azure Data Factory Template: Salesforce to Snowflake Metadata Driven Data Lake
+Azure Data Factory (AFF) Template: Salesforce to Snowflake Metadata Driven Data Lake
 
 5 Minute Demo - https://www.youtube.com/watch?v=mI89lLFwSdQ
 <br/>30 Minute End to End configuration (coming soon!)
@@ -17,7 +17,7 @@ https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&language
 You will need a Snowflake linked service
 https://learn.microsoft.com/en-us/azure/data-factory/connector-snowflake?tabs=data-factory#create-a-linked-service-to-snowflake-using-ui
 
-When you create your linked service, you will want to ensure the ADD system user has a role that has been granted the following following privileges on the database you are using for this project. This following code will execte when you provide the database name and role name.
+When you create your linked service, you will want to ensure the ADF system user has a role that has been granted the following following privileges on the database you are using for this project. This following code will execte when you provide the database name and role name.
 <code>
 GRANT CREATE EXTERNAL TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT CREATE MASKING POLICY ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
