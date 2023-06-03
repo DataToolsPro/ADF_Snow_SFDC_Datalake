@@ -1,4 +1,4 @@
-# adf_snow_sfdc_datalake
+# ADF_Snow_SFDC_Datalake
 Azure Data Factory (AFF) Template: Salesforce to Snowflake Metadata Driven Data Lake
 
 5 Minute Demo - https://www.youtube.com/watch?v=mI89lLFwSdQ
