@@ -20,7 +20,6 @@ https://learn.microsoft.com/en-us/azure/data-factory/connector-snowflake?tabs=da
 When you create your linked service, you will want to ensure the ADF system user has a role that has been granted the following following privileges on the database you are using for this project. This following code will execte when you provide the database name and role name.
 <code>
 GRANT CREATE EXTERNAL TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
-GRANT CREATE MASKING POLICY ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT CREATE SCHEMA ON DATABASE <db_name> TO ROLE <role_name>;
 GRANT CREATE STAGE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT CREATE TABLE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
@@ -32,7 +31,6 @@ GRANT SELECT ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT SELECT ON FUTURE VIEWS IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT TRUNCATE ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT UPDATE ON FUTURE TABLES IN DATABASE <db_name> TO ROLE <role_name>;
-GRANT USAGE ON ACCOUNT TO ROLE <role_name>;
 GRANT USAGE ON FUTURE FUNCTIONS IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT USAGE ON FUTURE PROCEDURES IN DATABASE <db_name> TO ROLE <role_name>;
 GRANT USAGE ON FUTURE SCHEMAS IN DATABASE <db_name> TO ROLE <role_name>;
