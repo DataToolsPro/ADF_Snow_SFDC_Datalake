@@ -73,9 +73,9 @@ Snowflake schema name where you will stage and create your Salesforce data lake.
 
 <br/><h4>ConfigureEnvironment <h4>
 Will run the congiguration steps which completes the following:
-Installs 2 stored procedures
-Adds a log table called ""
-Adds a meta data table called ""
+Installs 2 stored procedures called "ADFMAPPINGFROMSFDCMETADATA" and "DDLFROMMETADATA" 
+Adds a log table called "LOGTABLE"
+Adds a meta data table called "SFDC_METADATA_STAGE_TEMP" and "SFDC_METADATA_STAGE"
 
 <br/><h4>CreateNewSchema<h4>
 This function will generate a brand new schema in your database to insert and create your data lake. This will require elevated permissions to create a schema on an existing databse in your Snowflake account.
