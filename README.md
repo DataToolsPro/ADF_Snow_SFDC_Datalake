@@ -64,7 +64,7 @@ https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storag
 <ul> <li>Installs two stored procedures: **"ADFMAPPINGFROMSFDCMETADATA"** and **"DDLFROMMETADATA"**.</li> <li>Adds a log table called **"LOGTABLE"**.</li> <li>Adds two metadata tables: **"SFDC_METADATA_STAGE_TEMP"** and **"SFDC_METADATA_STAGE"**.</li> </ul>
 <br/><h4>CreateNewSchema</h4> This function generates a new schema in your database for inserting and creating your data lake. This requires elevated permissions to create a schema in your Snowflake account. <br>Accepted values:</br>
 
-<ul> <li>**"yes"** - Creates a new schema.</li> <li>**"no"** - Uses an existing schema.</li> </ul>
+<ul> <li>**"yes"** - Will create or replace your schema in your Snowflake DatabaseName using SchemaName. Requires schema creation permissions.</li> <li>**"no"** - Will use the the SchemaName to perform all pipeline functions.</li> </ul>
 <br/><h4>AppendFields</h4> This function appends new fields to your metadata if they are added to your source table. <br>Accepted values:</br>
 
 <ul> <li>**"yes"** - Appends new fields in your source table.</li> <li>**"no"** - Ignores new fields in your source table.</li> </ul>
