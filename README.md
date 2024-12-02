@@ -59,3 +59,46 @@ https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storag
 <li>Follow the Template Prompts to select your Salesforce, Snowflake, and Blob storage linked services</li>
 <li>Select the canvas and click parameters</li>
 <li>Fill in the parameters for DatabaseName, Schemaname, and optional prompts for creating a new schema or using an existing schema.</li></ol>
+
+<h2>Usage</h2>
+When you configure the template you will configure the following ADF parameters
+<br/><h4>SinkSalesforceObjects</h4>
+Comma seperared lists of Salesforce objects. This list is case sensitive and should match your Salesforce organization's Object API Names. When Snowflake tables are created, they are converted to case insisitive (upper case).
+
+<br/><h4>DatabaseName<h4>
+Your Snowflake Database where your schema and stage tables will be created and populated with data.
+
+<br/><h4>SchemaName<h4>
+Snowflake schema name where you will stage and create your Salesforce data lake.
+
+<br/><h4>ConfigureEnvironment <h4>
+Will run the congiguration steps which completes the following:
+Installs 2 stored procedures
+Adds a log table called ""
+Adds a meta data table called ""
+
+<br/><h4>CreateNewSchema<h4>
+This function will generate a brand new schema in your database to insert and create your data lake. This will require elevated permissions to create a schema on an existing databse in your Snowflake account.
+<br>Accepted values:</br>
+"yes" Will append new fields in your source table
+"no" Will ignore new fields in your source table
+
+<br/><h4>AppendFields </h4>
+This function will append new fields to your meta data if they are added to your source table.
+<br>Accepted values:</br>
+"yes" Will append new fields in your source table
+"no" Will ignore new fields in your source table
+
+<br/><h4>SnowErrorHandling </h4>
+When copying data to Snowfake, we have enabled error handling. 
+<br/> Accepted string values:<br/>
+"CONTINUE"  Will ignore errors and insert only valid records in your data set.
+"SKIP_FILE" Will the intire file resulting in 0 records inserted.
+"ABORT_STATEMENT": Will fail the pipeline
+
+<br/><h4>RecordLimit<h4>
+Record limit was designed to help with testing and debugging to reduce the size of your object queries.
+<br/>Accepted string value: "LIMIT 1000000" 
+
+<h4>VersionNumber</h4>
+VersionNumber is set for development purposes. We recommend not updating this parameter to conflict with backwards compatibility.
